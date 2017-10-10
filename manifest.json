@@ -7,23 +7,26 @@
 
   "icons": {
     "48": "icons/icon.png"
-  },
-  
+  }, 
   "browser_action": {
-    "default_icon": "icons/icon.png"
-  },
- 
-	"content_scripts": [
+  "default_icon": "icons/icon.png",
+  "browser_style": true,
+  "default_popup": "popup/popup.html"
+  },  
+  "content_scripts": [
     {
-      "matches": ["*://*.quora.com/*"],
+    "matches": ["*://*.quora.com/*"],
 	  "js": ["nightly.js"]
 	  
     }
 	],
-
-
-	"permissions": [
-    "activeTab",
+  "background": {
+    "scripts": [
+        "background.js"
+    ]
+},
+  "permissions": [
+  "activeTab",
 	"tabs",
 	"webRequest"
 	]

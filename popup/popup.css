@@ -1,0 +1,9 @@
+html, body {
+  width: auto;
+}
+
+
+div.outer{
+	padding:20px;
+	margin: auto 0px;
+}
